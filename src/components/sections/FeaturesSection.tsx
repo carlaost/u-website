@@ -12,11 +12,11 @@ export const FeaturesSection = () => {
       <div className="mx-auto w-full max-w-screen-xl px-8 py-16">
         <section className="flex h-full flex-col justify-center gap-24">
           <div className="flex flex-col gap-10 md:flex-row md:items-end">
-            <div className="flex flex-col">
+            <div className="flex flex-col pb-0.5">
               <h6>Features</h6>
               <h1>An Intelligent Assistant</h1>
             </div>
-            <div className="flex flex-col pb-1">
+            <div className="flex flex-col gap-1">
               <p>
                 Imagine having a research assistant who works tirelessly for
                 you.

@@ -18,7 +18,7 @@ export const AboutSection = () => {
               <h1>A Next Generation, AI-Powered Research System</h1>
             </section>
 
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-1">
               <p>
                 Undermind isn't just a search engine — it{' '}
                 <span className="font-semibold">

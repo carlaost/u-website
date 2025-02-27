@@ -4,7 +4,7 @@ import will from '@/assets/will.jpeg';
 
 export const TestimonialsSection = () => {
   return (
-    <div className="flex min-h-0 w-full items-end justify-center md:min-h-screen bg-slate-3" >
+    <div className="flex min-h-0 w-full items-end justify-center bg-slate-3 md:min-h-screen">
       <div className="mx-auto w-full max-w-screen-xl px-8 py-16 md:pb-32">
         <section className="flex flex-col items-center justify-center gap-10 pb-24">
           <section className="flex flex-col items-center">
@@ -29,10 +29,10 @@ export const TestimonialsSection = () => {
                 <img
                   src={dan.src}
                   alt="Dan"
-                  className="h-[60px] w-[60px] rounded-full object-contain"
+                  className="size-[60px] rounded-full object-contain"
                 />
                 <div className="flex flex-col gap-1">
-                  <p className="font-semibold">Dan Recht</p>
+                  <p className="font-semibold text-slate-12">Dan Recht</p>
                   <p className="sm">
                     Applied Physics PhD, hard-tech entrepreneur, and startup
                     advisor
@@ -62,10 +62,10 @@ export const TestimonialsSection = () => {
                 <img
                   src={will.src}
                   alt="Will"
-                  className="h-[60px] w-[60px] rounded-full object-contain"
+                  className="size-[60px] rounded-full object-contain"
                 />
                 <div className="flex flex-col gap-1">
-                  <p className="font-semibold">Will Olsen</p>
+                  <p className="font-semibold text-slate-12">Will Olsen</p>
                   <p className="sm">Co-founder and CEO at Engage Bio</p>
                 </div>
               </section>
@@ -88,10 +88,12 @@ export const TestimonialsSection = () => {
                 <img
                   src={gabriel.src}
                   alt="Gabriel"
-                  className="h-[60px] w-[60px] rounded-full object-contain"
+                  className="size-[60px] rounded-full object-contain"
                 />
                 <div className="flex flex-col gap-1">
-                  <p className="font-semibold">Gabriel Villafuerte</p>
+                  <p className="font-semibold text-slate-12">
+                    Gabriel Villafuerte
+                  </p>
                   <p className="sm">
                     MD/PhD and Chief Medical Officer, Actipulse Neuroscience
                   </p>

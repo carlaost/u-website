@@ -63,7 +63,7 @@ export const BiosSection = () => {
             </div>
           </div>
 
-          <div className="flex w-full flex-col gap-4">
+          <div className="flex w-full flex-col gap-1">
             <h1>Built by Researchers, for Researchers</h1>
             <p>
               Undermind was founded by{' '}
