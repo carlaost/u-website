@@ -4,12 +4,12 @@ import * as React from 'react';
 
 import { cn } from '@/utils/cn';
 
-const buttonVariants = cva('h-10 rounded-2xl px-4 py-2', {
+const buttonVariants = cva('h-10 rounded-2xl px-16 py-2', {
   variants: {
     variant: {
-      default: 'bg-accent font-medium text-slate-1 hover:bg-accent-muted',
+      default: 'bg-accent font-medium text-slate-1 hover:bg-accent-hover',
       outline:
-        'border border-slate-6 bg-transparent font-medium hover:text-slate-12',
+        'border border-slate-6 bg-transparent font-medium text-slate-11 hover:text-slate-12',
     },
   },
   defaultVariants: {

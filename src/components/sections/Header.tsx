@@ -12,10 +12,10 @@ export const Header = () => {
           <a className="text-slate-11 hover:text-slate-10" href="/pricing">
             Pricing
           </a>
-          <a className="text-slate-11 hover:text-slate-10" href="/login">
+          <a className="text-slate-11 hover:text-slate-10" href="https://app.undermind.ai/?login" target="_blank">
             Login
           </a>
-          <Button>Sign up</Button>
+          <a href="https://app.undermind.ai/?register" target="_blank"><Button>Sign up</Button></a>
         </div>
       </div>
     </div>

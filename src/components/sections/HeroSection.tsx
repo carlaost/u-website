@@ -32,23 +32,21 @@ export const HeroSection = () => {
               </p>
             </div>
             <div className="flex w-full flex-col-reverse gap-4 pt-8 md:w-[30%] md:flex-col">
-              <Button
-                variant="outline"
-                className="bg-slate-1"
-                onClick={() => {
-                  window.location.href = '/#features';
-                }}
-              >
-                Learn more
-              </Button>
-              <Button
-                className="bg-accent text-slate-1 hover:bg-accent-muted"
-                onClick={() => {
-                  window.location.href = 'https://app.undermind.ai';
-                }}
-              >
-                Try Searching Free
-              </Button>
+              <a href="/#features" className="w-full">
+                <Button
+                  variant="outline"
+                  className="bg-slate-1 hover:bg-slate-2 w-full"
+                >
+                  Learn more
+                </Button>
+              </a>
+              <a href="https://app.undermind.ai" target="_blank" className="w-full">
+                <Button
+                  className="w-full"
+                >
+                  Try Searching Free
+                </Button>
+              </a>
             </div>
           </div>
           <section className="flex flex-col items-center gap-4">

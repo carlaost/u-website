@@ -5,7 +5,7 @@ import comprehensive_discovery from '@/assets/comprehensive-discovery.svg';
 
 export const FeaturesSection = () => {
   return (
-    <div id="features" className="w-full">
+    <div id="features" className="flex min-h-0 w-full items-center justify-center md:min-h-screen">
       <div className="mx-auto w-full max-w-screen-xl px-8 py-16">
         <section className="flex h-full flex-col justify-center gap-24">
           <div className="flex flex-row items-end gap-10">

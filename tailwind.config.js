@@ -28,8 +28,12 @@ module.exports = {
         },
         accent: {
           DEFAULT: '#5151CD',
+          hover: '#5151CD99',
           muted: '#9B9EF0',
           light: '#B1A9FF',
+        },
+        dark: {
+          bg: '#13131E',
         },
       },
       keyframes: {
