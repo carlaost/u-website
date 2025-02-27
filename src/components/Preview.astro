@@ -1,0 +1,84 @@
+---
+import play from '../assets/play.svg';
+---
+
+<!-- <script src="https://player.vimeo.com/api/player.js"></script> -->
+
+
+<div class="container">
+    <div class="padder">
+        <section id="preview">
+            <div style="display: flex; flex-direction: row; gap: 20px; align-items: end;">
+                <section id="header">
+                    <h6>
+                        Preview
+                    </h6>
+                    <h1>
+                        See How It Works
+                    </h1>
+                </section>
+                <div style="display: flex; flex-direction: row; gap: 12px; align-items: center;">
+                    <img id="play-button" src={play.src} alt="Undermind Logo" />
+                    <p>2 min</p>
+                </div>
+            </div>
+            <div class="video-container">
+                <iframe
+                    src="https://www.loom.com/embed/10067c49e4424b949a4b8c9fd8f3b12c?sid=6803f41f-399f-4298-9159-4cf5de1f2fc0"
+                    frameborder="0"
+                    allowfullscreen
+                    style="width: 100%; height: 100%;"
+                ></iframe>
+            </div>
+        </section>
+    </div>
+</div>
+
+<style>
+
+    #preview {
+        width: 100%;
+        height: 100%;
+    }
+
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    @media (max-width: 768px) {
+        #preview {
+            height: auto;
+        }
+    }
+</style>
+
+<!-- <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const playButton = document.getElementById('play-button');
+        const iframe = document.getElementById('video-iframe');
+
+        if (playButton && iframe) {
+            playButton.addEventListener('click', function() {
+                const player = new Vimeo.Player(iframe);
+
+                player.play().catch(function(error) {
+                    console.error('Error playing the video:', error);
+                });
+            });
+        }
+    });
+</script> -->

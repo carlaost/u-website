@@ -1,0 +1,142 @@
+---
+import chevron from "@/assets/chevron.svg";
+---
+<div class="container" >
+    <div class="padder">
+      <section id="faq">
+        <section class="header" style="width: 100%; display: flex; flex-direction: column; align-items: center; gap: 10px;">
+          <h6>FAQ</h6>
+          <h1>Frequently Asked Questions</h1>
+        </section>
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)">
+              <h3>What scientific databases do you search?</h3>
+              <img src={chevron.src} alt="Chevron" class="accordion-icon" />
+            </button>
+            <div class="accordion-content" style="display: none;">
+              <p>We cover all fields of science using the <a href="https://www.semanticscholar.org/" target="_blank">Semantic Scholar</a> database of over 200 million articles, which contains PubMed, ArXiv, and <a href="https://www.semanticscholar.org/about/publishers" target="_blank">many other databases.</a></p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)">
+              <h3>Why does it take 3-5 minutes to complete?</h3>
+              <img src={chevron.src} alt="Chevron" class="accordion-icon" />
+            </button>
+            <div class="accordion-content" style="display: none;">
+              <p>Undermind is thoroughly researching your topic, not just running a quick search. During those few minutes, it's scanning through hundreds of papers, cross comparing and ranking sources, and adapting its strategy as it learns about your topic.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)">
+              <h3>Do you search full texts, or just abstracts?</h3>
+              <img src={chevron.src} alt="Chevron" class="accordion-icon" />
+            </button>
+            <div class="accordion-content" style="display: none;">
+              <p>Undermind Free Tier searches abstracts and metadata. In addition, for users who upgrade to our Pro tier, we provide more compute to also search the full texts of nearly all open access and preprint articles.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)">
+              <h3>What makes Undermind different?</h3>
+              <img src={chevron.src} alt="Chevron" class="accordion-icon" />
+            </button> 
+            <div class="accordion-content" style="display: none;">
+              <p>Every other "search engine" you've used before just returns approximate recommendations, not precisely relevant results. As researchers ourselves, we know what you need is often so complex that you have to wade through hundreds of results. It's painful. You should think of Undermind as sending a talented colleague to do a few days of research for you, working hard to find exactly what you need.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)">
+              <h3>I didn't find my paper. Why?</h3>
+              <img src={chevron.src} alt="Chevron" class="accordion-icon" />
+            </button>
+            <div class="accordion-content" style="display: none;">
+              <p>If you're looking for a very specific paper, there's a small chance it isn't present in the <a href="https://www.semanticscholar.org/" target="_blank">Semantic Scholar</a> database of over 200 million articles which we draw from.
+
+                Another possibility is that the Undermind search has not yet converged. Unlike in a traditional search engine, where all results are returned at once, ordered from best to worst, we perform a search in stages, like you would as you carefully search the literature. We look at a the most promising set of papers first, and depending on the difficulty of finding relevant results within these papers, we may not discover all the relevant papers in this first pass. By statistically modeling this process, we can determine what fraction of relevant papers we have likely found. If your paper didn't show up at first, it's likely the search system knows it has not yet found everything (and the report summary will tell you). You can deploy more computation ("extend" the search) to find the rest. See our <a href="https://www.undermind.ai/static/Undermind_whitepaper.pdf">whitepaper</a> for additional explanation.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)">
+              <h3>Why the name Undermind?</h3>
+              <img src={chevron.src} alt="Chevron" class="accordion-icon" />
+            </button>
+            <div class="accordion-content" style="display: none;">
+              <p>Undermind represents the intelligence that supports and underpins your work. Like the roots of a tree, it provides a deep, rich foundation of knowledge, helping you uncover insights that fuel discovery.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  
+  <style>
+    #faq {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .accordion {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .accordion-header {
+      cursor: pointer;
+      padding: 1rem;
+      border: none;
+      width: 100%;
+      text-align: left;
+      background: var(--bg-base);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .accordion-header.active {
+      background: var(--bg-base);
+    }
+    .accordion-icon {
+      width: 24px;
+      height: 24px;
+    }
+    .accordion-icon.active {
+      transform: rotate(180deg);
+    }
+    .accordion-content {
+      padding: 1rem;
+    }
+    .accordion-content p {
+      margin: 0;
+      font-size: 16px;
+    }
+    .container {
+      padding-top: 120px;
+      align-items: start;
+      padding-bottom: 120px;
+      min-height: 0px;
+      height: auto;
+    }
+    
+    @media (max-width: 768px) {
+      .container {
+        padding-top: 40px;
+      }
+    }
+  </style>
+  
+  <script is:inline>
+    function toggleAccordion(button) {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector('.accordion-icon');
+      
+      button.classList.toggle('active');
+      icon.classList.toggle('active');
+      content.style.display = content.style.display === "block" ? "none" : "block";
+    }
+  </script>
+  

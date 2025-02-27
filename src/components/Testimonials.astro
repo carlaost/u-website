@@ -1,0 +1,124 @@
+---
+import dan from '../assets/dan.jpeg';
+import will from '../assets/will.jpeg';
+import gabriel from '../assets/gabriel.jpeg';
+---
+
+<div class="container" style="background-color: var(--bg-muted);">
+    <div class="padder">
+        <section id="testimonials">
+            <section class="header" style="align-items: center;">
+                <h6>
+                    Testimonials
+                </h6>
+                <h1>
+                    What Researchers Say
+                </h1>
+            </section>
+            <section id="testimonial-row">
+                <div class="testimonial-card">
+                    <p>
+                        Undermind’s unique, <span style="font-weight: 600;">high-powered search and synthesis algorithms</span> give me exactly the information I need, and it’s come through for me at many crucial moments in my technical work. Along with many others on our team, I’m a paying subscriber, and I think anyone searching the scientific or technical literature should be using this incredible tool.
+                    </p>
+                    <section id="testimonial-author">
+                        <img src={dan.src} alt="Dan" />
+                        <div style="display: flex; flex-direction: column; gap: 4px;">
+                            <p style="font-weight: 600;">
+                                Dan Recht
+                            </p>
+                            <p class="sm">
+                                Applied Physics PhD, hard-tech entrepreneur, and startup advisor
+                            </p>
+                        </div>
+                    </section>
+                </div>
+                <div class="testimonial-card">
+                    <p>
+                        Undermind is easily <span style="font-weight: 600;">the best lit search tool out there.</span> My team and I have been using it for months and are now long-term subscribers. It does what ChatGPT can’t: gives you precise examples from which it synthesizes a thorough summary, even for highly specialized and complex research topics. It’s <span style="font-weight: 600;">had a huge impact on our work,</span> for example by helping us quickly identify the right mouse models to test our immune-modulating drugs, saving us potentially months of troubleshooting.
+                    </p>
+                    <section id="testimonial-author">
+                        <img src={will.src} alt="Will" />
+                        <div style="display: flex; flex-direction: column; gap: 4px;">
+                            <p style="font-weight: 600;">
+                                Will Olsen
+                            </p>
+                            <p class="sm">
+                                Co-founder and CEO at Engage Bio
+                            </p>
+                        </div>
+                    </section>
+                </div>
+                <div class="testimonial-card">
+                    <p>
+                        I’ve been using Undermind along with my team and we love this product. It’s amazing how it can dig up obscure papers that would <span style="font-weight: 600;">take days or weeks to try to find otherwise.</span> It’s incredibly valuable because it directly provides precisely the information you need. I’ve had our whole R&D team at Actipulse set up with subscription access for a while now and we are thrilled with it!
+                    </p>
+                    <section id="testimonial-author">
+                        <img src={gabriel.src} alt="Gabriel" />
+                        <div style="display: flex; flex-direction: column; gap: 4px;">                            <p style="font-weight: 600;">
+                                Gabriel Villafuerte
+                            </p>
+                            <p class="sm">
+                                MD/PhD and Chief Medical Officer, Actipulse Neuroscience
+                            </p>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </section>
+    </div>
+</div>
+
+<style>
+    #testimonials {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 120px;
+    }
+
+    #header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #testimonial-row {
+        display: grid;
+		grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    #testimonial-author {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        margin-top: 16px;
+    }
+
+    #testimonial-author img {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+        border-radius: 50%;
+    }
+
+    .testimonial-card {
+        background-color: var(--bg-focus);
+        padding: 20px;
+        border-radius: 24px;
+        height: auto;
+        margin-bottom: auto;
+    }
+
+    @media (max-width: 768px) {
+        #testimonial-row {
+            grid-template-columns: 1fr;
+        }
+        #testimonials {
+            gap: 20px;
+        }
+    }
+        
+</style>

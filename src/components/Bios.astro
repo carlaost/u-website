@@ -1,0 +1,103 @@
+---
+import dan from '../assets/dan.jpeg';
+import twitter from '../assets/twitter.svg';
+import linkedin from '../assets/linkedin.svg';
+---
+
+<div class="container">
+    <div class="padder" style="display: flex; flex-direction: column; gap: 40px;">
+        <section id="bios">
+            <div class="team">
+                <div class="team-member">
+                    <img src={dan.src} alt="">
+                    <h3>Joshua Ramette</h3>
+                    <p class="sm">CEO</p>
+                    <div class="social-links">
+                        <a href="https://twitter.com/RametteJoshua">
+                            <img src={twitter.src} alt="Twitter" >
+                        </a>
+                        <a href="https://www.linkedin.com/in/joshua-ramette-50984791/">
+                            <img src={linkedin.src} alt="LinkedIn" style="opacity: 0.5;">
+                        </a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src={dan.src} alt="">
+                    <h3>Tom Hartke</h3>
+                    <p class="sm">CTO</p>
+                    <div style="display: flex; flex-direction: row; gap: 16px;" class="social-links">
+                        <a href="https://twitter.com/tom_hartke">
+                            <img src={twitter.src} alt="Twitter" >
+                        </a>
+                        <a href="https://www.linkedin.com/in/thomas-hartke-229a0679/">
+                            <img src={linkedin.src} alt="LinkedIn" style="opacity: 0.5;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="copy-col">
+                <h1>
+                    Built by Researchers, for Researchers
+                </h1>
+                <p>
+                    Undermind was founded by <span style="font-weight: 600;">two MIT PhDs in quantum physics</span>, bringing decades of experience in <span style="font-weight: 600;">deep research, AI, and scientific discovery</span>.
+                </p>
+                <p>
+                    We’ve lived the struggle of sifting through endless papers—so we built Undermind to revolutionize the way researchers find knowledge.
+                </p>
+            </section>
+        </section>
+        <div style="display: flex; justify-content: center; margin-top: 120px;">
+            <a class="button" style="width:fit-content" href="https://docs.astro.build">Search now</a>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    #bios {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        gap: 40px;
+        align-items: center;
+    }
+    .team {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        width: 100%;
+        justify-content: center;
+    }
+    .team-member {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .team-member img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+    .social-links {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+    }
+    .social-links img {
+        width: 16px;
+        height: 16px;
+        border-radius: 0%;
+        filter: grayscale(100%);
+    }
+
+    @media (max-width: 768px) {
+        #bios {
+            flex-direction: column-reverse;
+
+        }
+    }
+    
+</style>

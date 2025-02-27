@@ -1,0 +1,28 @@
+---
+
+
+
+import { HeroSection } from '@/components/sections/HeroSection';
+import { AboutSection } from '@/components/sections/AboutSection';
+import Base from '@/templates/Base.astro';
+import { AppConfig } from '@/utils/AppConfig';
+import { FeaturesSection } from '@/components/sections/FeaturesSection';
+import { TestimonialsSection } from '@/components/sections/TestimonialsSection';
+import { ExamplesSection } from '@/components/sections/ExamplesSection';
+import { BiosSection } from '@/components/sections/BiosSection';
+import { Header } from '@/components/sections/Header';
+import { FAQSection } from '@/components/sections/FAQSection';
+const { title } = AppConfig;
+const { description } = AppConfig;
+---
+
+<Base head={{ title, description }}>
+  <Header />
+  <HeroSection />
+  <FeaturesSection />
+  <TestimonialsSection />
+  <AboutSection />
+  <ExamplesSection />
+  <FAQSection client:load />
+  <BiosSection />
+</Base>

@@ -1,0 +1,65 @@
+---
+import logo from '../assets/logo.png';
+---
+<div class="container" style="min-height:0px; height:fit-content;">
+    <div class="padder">
+
+            <div class="footer-content">
+                <div class="left-col" style="display: flex; flex-direction: column; gap: 8px;">
+                    <img src={logo.src} alt="Undermind Logo" class="logo" style="width: 40px; height: 40px;">
+                    <h3>
+                        Undermind - Deep Scientific Research
+                    </h3>
+                    <div style="display: flex; flex-direction: row; gap: 16px; align-items: center;">
+                        <a>
+                            Terms of Use
+                        </a>
+                        <a>
+                            Privacy Policy
+                        </a>
+                        <p>
+                            © 2025 Undermind
+                        </p>
+                    </div>
+                </div>
+                <div class="right-col" style="display: flex; flex-direction: row; gap: 16px; align-items: center;">
+                    <a href="https://twitter.com/UndermindAI">
+                        Twitter
+                    </a>
+                    <a href="https://www.linkedin.com/company/undermind-ai">
+                        LinkedIn
+                    </a>
+                    <a href="mailto:support@undermind.ai">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+
+    </div>
+</div>
+
+<style>
+    .footer-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: end;
+        padding: 40px 0px;
+        width: 100%;
+    }
+    .footer-content a {
+        color: var(--text-base);
+        text-decoration: none;
+    }
+    .footer-content a:hover {
+        color: var(--text-muted);
+    }
+    @media (max-width: 768px) {
+        .footer-content {
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+    }
+    
+</style>
