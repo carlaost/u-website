@@ -22,7 +22,7 @@ const AccordionItem = React.forwardRef<
 AccordionItem.displayName = 'AccordionItem';
 
 const accordionTriggerVariants = cva(
-  'flex flex-1 items-center justify-between py-4 font-medium transition-all hover:text-slate-12 [&[data-state=open]>svg]:rotate-180',
+  'flex flex-1 items-center justify-between py-4 text-base font-medium transition-all hover:text-slate-12 md:text-lg [&[data-state=open]>svg]:rotate-180',
   {
     variants: {
       variant: {
@@ -71,7 +71,7 @@ const AccordionTrigger = React.forwardRef<
         {...props}
       >
         {children}
-        <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
+        <ChevronDown className="size-4 shrink-0 transition-transform duration-200" />
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>
   );

@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/Button';
 export const AboutSection = () => {
   return (
     <div className="flex min-h-0 w-full items-center justify-center md:min-h-screen">
-      <div className="mx-auto w-full max-w-screen-xl px-8">
+      <div className="mx-auto w-full max-w-screen-xl px-8 py-16">
         <section className="grid w-full grid-cols-1 items-center gap-10 md:grid-cols-2">
           <img
             src={branchesLogo.src}

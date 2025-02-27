@@ -4,6 +4,7 @@ h1 {
   font-weight: 900;
   letter-spacing: -0.025em;
   font-size: 40px;
+  line-height: 1.1;
 }
 
 h1.title-font {
@@ -60,3 +61,10 @@ a {
 a:hover {
   color: theme('colors.accent.muted');
 }
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 32px;
+  }
+}
+

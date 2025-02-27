@@ -5,10 +5,13 @@ import comprehensive_discovery from '@/assets/comprehensive-discovery.svg';
 
 export const FeaturesSection = () => {
   return (
-    <div id="features" className="flex min-h-0 w-full items-center justify-center md:min-h-screen">
+    <div
+      id="features"
+      className="flex min-h-0 w-full items-center justify-center md:min-h-screen"
+    >
       <div className="mx-auto w-full max-w-screen-xl px-8 py-16">
         <section className="flex h-full flex-col justify-center gap-24">
-          <div className="flex flex-row items-end gap-10">
+          <div className="flex flex-col gap-10 md:flex-row md:items-end">
             <div className="flex flex-col">
               <h6>Features</h6>
               <h1>An Intelligent Assistant</h1>
@@ -31,7 +34,7 @@ export const FeaturesSection = () => {
               <img
                 src={complex_topics.src}
                 alt="Complex Topics"
-                className="h-[100px] w-[100px] object-contain"
+                className="size-[100px] object-contain"
               />
               <h3 className="ml-3">Incredibly complex topics</h3>
               <p className="ml-3">
@@ -43,7 +46,7 @@ export const FeaturesSection = () => {
               <img
                 src={accurate_results.src}
                 alt="Accurate Results"
-                className="h-[100px] w-[100px] object-contain"
+                className="size-[100px] object-contain"
               />
               <h3 className="ml-3">Accurate results</h3>
               <p className="ml-3">
@@ -56,7 +59,7 @@ export const FeaturesSection = () => {
               <img
                 src={comprehensive_discovery.src}
                 alt="Comprehensive Discovery"
-                className="h-[100px] w-[100px] object-contain"
+                className="size-[100px] object-contain"
               />
               <h3 className="ml-3">Comprehensive discovery</h3>
               <p className="ml-3">
@@ -69,7 +72,7 @@ export const FeaturesSection = () => {
               <img
                 src={brainstorm_copilot.src}
                 alt="Brainstorm Copilot"
-                className="h-[100px] w-[100px] object-contain"
+                className="size-[100px] object-contain"
               />
               <h3 className="ml-3">Powerful analysis</h3>
               <p className="ml-3">

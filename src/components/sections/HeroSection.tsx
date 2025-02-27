@@ -7,7 +7,6 @@ import MIT_logo from '@/assets/MIT_logo.png';
 import Princeton_logo from '@/assets/Princeton_logo.png';
 import { Button } from '@/components/ui/Button';
 
-
 export const HeroSection = () => {
   return (
     <div
@@ -19,7 +18,7 @@ export const HeroSection = () => {
         backgroundPosition: 'bottom',
       }}
     >
-      <div className="mx-auto w-full max-w-screen-xl px-8 py-16">
+      <div className="mx-auto w-full max-w-screen-xl px-8 py-32 md:py-16">
         <div className="flex flex-col gap-24">
           <div className="flex flex-col gap-4 md:flex-row">
             <div className="flex w-full flex-col gap-4">
@@ -35,21 +34,21 @@ export const HeroSection = () => {
               <a href="/#features" className="w-full">
                 <Button
                   variant="outline"
-                  className="bg-slate-1 hover:bg-slate-2 w-full"
+                  className="w-full bg-slate-1 hover:bg-slate-2"
                 >
                   Learn more
                 </Button>
               </a>
-              <a href="https://app.undermind.ai" target="_blank" className="w-full">
-                <Button
-                  className="w-full"
-                >
-                  Try Searching Free
-                </Button>
+              <a
+                href="https://app.undermind.ai"
+                target="_blank"
+                className="w-full"
+              >
+                <Button className="w-full">Try Searching Free</Button>
               </a>
             </div>
           </div>
-          <section className="flex flex-col items-center gap-4">
+          <section className="flex flex-col items-center gap-8">
             <p className="xs">Trusted and used by researchers at</p>
             <div className="flex w-full flex-row flex-wrap items-center justify-center gap-4 lg:justify-between">
               <img
