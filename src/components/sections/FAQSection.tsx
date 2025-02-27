@@ -102,7 +102,7 @@ export const FAQSection = () => {
                   not yet found everything (and the report summary will tell
                   you). You can deploy more computation ("extend" the search) to
                   find the rest. See our{' '}
-                  <a href="https://www.undermind.ai/static/Undermind_whitepaper.pdf">
+                  <a href="/whitepaper.pdf" target="_blank">
                     whitepaper
                   </a>{' '}
                   for additional explanation.

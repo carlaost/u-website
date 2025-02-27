@@ -34,10 +34,7 @@ export const AboutSection = () => {
               </p>
               <p>
                 We{' '}
-                <a
-                  href="https://www.undermind.ai/static/Undermind_whitepaper.pdf"
-                  target="_blank"
-                >
+                <a href="/whitepaper.pdf" target="_blank">
                   benchmarked
                 </a>{' '}
                 the first version of Undermind to be{' '}
@@ -46,13 +43,8 @@ export const AboutSection = () => {
               </p>
             </div>
 
-            <a href="https://www.undermind.ai/static/Undermind_whitepaper.pdf"
-                  target="_blank">
-              <Button
-                className="w-fit"
-              >
-                Learn more
-              </Button>
+            <a href="/whitepaper.pdf" target="_blank">
+              <Button className="w-fit">Learn more</Button>
             </a>
           </div>
         </section>
