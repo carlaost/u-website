@@ -4,7 +4,7 @@ export const FooterSection = () => {
   return (
     <div className="h-fit min-h-0 w-full">
       <div className="mx-auto w-full max-w-screen-xl px-8">
-        <div className="flex w-full flex-col items-end justify-between py-10 md:flex-row">
+        <div className="flex w-full flex-col items-start md:items-end justify-between py-10 md:flex-row">
           <div className="flex flex-col gap-2">
             <img src={Logo.src} alt="Undermind Logo" className="h-10 w-10" />
             <h3>Undermind - Deep Scientific Research</h3>

@@ -1,6 +1,5 @@
 ---
 import { FooterSection } from '@/components/sections/FooterSection';
-import { AppConfig } from '@/utils/AppConfig';
 import '@/styles/index.css';
 export interface Props {
   head: {
@@ -8,23 +7,43 @@ export interface Props {
     description: string;
   };
 }
-
-const {
-  head: { title, description },
-} = Astro.props as Props;
 ---
 
 <html lang='en'>
   <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <title>{title}</title>
-    <meta name='description' content={description} />
-    <meta name='author' content={AppConfig.author} />
-
-    <link rel='alternate' type='application/rss+xml' href='/rss.xml' />
-    <link rel='icon' type='image/x-icon' href='/favicon.ico' />
-  </head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<!-- Primary Meta Tags -->
+		<title>Undermind - Radically better research and discovery</title>
+		<meta name="title" content="Undermind - Radically better research and discovery">
+		<meta name="description" content="Undermind is an AI-powered research assistant that autonomously reads hundreds of papers to deliver precisely relevant insights — faster than ever.">
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://test.app.undermind.ai/">
+		<meta property="og:title" content="Undermind - Radically better research and discovery">
+		<meta property="og:description" content="Our AI assistant carefully reads hundreds of academic papers for you, finding exactly what you need, no matter how complex.">
+		<meta property="og:image" content="/share-card.png">
+	
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image">
+		<meta property="twitter:url" content="https://test.app.undermind.ai/">
+		<meta property="twitter:title" content="Undermind - Radically better research and discovery">
+		<meta property="twitter:description" content="Our AI assistant carefully reads hundreds of academic papers for you, finding exactly what you need, no matter how complex.">
+		<meta property="twitter:image" content="/share-card.png">
+	
+		<!-- Favicon -->
+		<link rel="icon" type="image/png" href="/logo.png" />
+		
+		<!-- Additional SEO tags -->
+		<meta name="keywords" content="AI research assistant, scientific research, academic search engine, systematic review">
+		<meta name="author" content="Undermind">
+		<meta name="robots" content="index, follow">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+	</head>
   <body class='bg-slate-2 text-slate-11'>
 
     <slot></slot>
