@@ -1,0 +1,19 @@
+---
+import Base from '@/templates/Base.astro';
+import { getEntry } from 'astro:content';
+import { Header } from '@/components/sections/Header';
+
+const refund = await getEntry('legal', 'refund');
+if (!refund) throw new Error('Refund policy not found');
+
+const { Content } = await refund.render();
+---
+
+<Base>
+  <Header />
+  <main class="container mx-auto px-4 py-16 prose prose-slate max-w-3xl">
+    <div style="padding-top: 100px;">
+      <Content />
+    </div>
+  </main>
+</Base> 

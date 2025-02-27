@@ -1,13 +1,12 @@
 import rss from '@astrojs/rss';
 
-import { AppConfig } from '@/utils/AppConfig';
-
 export const get = () =>
   rss({
     // `<title>` field in output xml
-    title: AppConfig.title,
+    title: 'Undermind - Radically better research and discovery',
     // `<description>` field in output xml
-    description: AppConfig.description,
+    description:
+      'Undermind is an AI-powered research assistant that autonomously reads hundreds of papers to deliver precisely relevant insights — faster than ever.',
     // base URL for RSS <item> links
     // SITE will use "site" from your project's astro.config.
     site: import.meta.env.SITE,
