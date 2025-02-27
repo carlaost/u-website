@@ -7,6 +7,7 @@ import MIT_logo from '@/assets/MIT_logo.png';
 import Princeton_logo from '@/assets/Princeton_logo.png';
 import { Button } from '@/components/ui/Button';
 
+
 export const HeroSection = () => {
   return (
     <div
