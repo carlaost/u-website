@@ -1,5 +1,6 @@
-import dan from '@/assets/dan.jpeg';
+import josh from '@/assets/josh.jpeg';
 import linkedin from '@/assets/linkedin.svg';
+import tom from '@/assets/tom.png';
 import twitter from '@/assets/twitter.svg';
 import { Button } from '@/components/ui/Button';
 
@@ -11,9 +12,9 @@ export const BiosSection = () => {
           <div className="flex w-full flex-row justify-center gap-10">
             <div className="flex flex-col items-center gap-2.5">
               <img
-                src={dan.src}
+                src={josh.src}
                 alt="Joshua Ramette"
-                className="h-[100px] w-[100px] rounded-full"
+                className="size-[100px] rounded-full"
               />
               <h3>Joshua Ramette</h3>
               <p className="sm">CEO</p>
@@ -22,14 +23,14 @@ export const BiosSection = () => {
                   <img
                     src={twitter.src}
                     alt="Twitter"
-                    className="h-4 w-4 grayscale"
+                    className="size-4 grayscale"
                   />
                 </a>
                 <a href="https://www.linkedin.com/in/joshua-ramette-50984791/">
                   <img
                     src={linkedin.src}
                     alt="LinkedIn"
-                    className="h-4 w-4 opacity-50 grayscale"
+                    className="size-4 opacity-50 grayscale"
                   />
                 </a>
               </div>
@@ -37,9 +38,9 @@ export const BiosSection = () => {
 
             <div className="flex flex-col items-center gap-2.5">
               <img
-                src={dan.src}
+                src={tom.src}
                 alt="Tom Hartke"
-                className="h-[100px] w-[100px] rounded-full"
+                className="size-[100px] rounded-full"
               />
               <h3>Tom Hartke</h3>
               <p className="sm">CTO</p>
@@ -48,14 +49,14 @@ export const BiosSection = () => {
                   <img
                     src={twitter.src}
                     alt="Twitter"
-                    className="h-4 w-4 grayscale"
+                    className="size-4 grayscale"
                   />
                 </a>
                 <a href="https://www.linkedin.com/in/thomas-hartke-229a0679/">
                   <img
                     src={linkedin.src}
                     alt="LinkedIn"
-                    className="h-4 w-4 opacity-50 grayscale"
+                    className="size-4 opacity-50 grayscale"
                   />
                 </a>
               </div>
