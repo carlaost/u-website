@@ -9,11 +9,7 @@ export const Header = () => {
           <img src={Logo.src} alt="Logo" className="size-6" />
         </a>
         <div className="flex flex-row items-center gap-8">
-          <a
-            className="text-slate-11 hover:text-slate-10"
-            href="https://app.undermind.ai/pricing"
-            target="_blank"
-          >
+          <a className="text-slate-11 hover:text-slate-10" href="/pricing">
             Pricing
           </a>
           <a

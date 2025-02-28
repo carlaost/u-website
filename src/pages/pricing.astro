@@ -1,21 +1,10 @@
 ---
-
+import Base from '@/templates/Base.astro';
+import { Header } from '@/components/sections/Header';
+import { PricingSection } from '@/components/sections/PricingSection';
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Pricing</title>
-    <meta 
-      name="description" 
-      content="Pricing options for Undermind AI"
-    />
-    <meta http-equiv="refresh" content="0;url=https://app.undermind.ai/pricing" />
-    <link rel="canonical" href="https://app.undermind.ai/pricing" />
-  </head>
-  <body>
-    <p>Redirecting to pricing page... <a href="https://app.undermind.ai/pricing">Click here if you are not redirected automatically</a></p>
-  </body>
-</html> 
+<Base>
+  <Header />
+  <PricingSection client:load/>
+</Base>

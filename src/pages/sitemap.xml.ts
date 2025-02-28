@@ -12,6 +12,7 @@ const pages = [
   { url: '/privacy', changefreq: 'monthly', priority: 0.2 },
   { url: '/terms', changefreq: 'monthly', priority: 0.2 },
   { url: '/refund', changefreq: 'monthly', priority: 0.2 },
+  { url: '/whitepaper.pdf', changefreq: 'monthly', priority: 0.8 },
   // Pages with external canonical URLs
   {
     url: 'https://app.undermind.ai/pricing',
@@ -28,7 +29,6 @@ const pages = [
     changefreq: 'monthly',
     priority: 0.8,
   },
-  { url: '/whitepaper.pdf', changefreq: 'monthly', priority: 0.8 },
 ];
 
 export const GET: APIRoute = async () => {

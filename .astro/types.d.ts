@@ -182,6 +182,13 @@ declare module 'astro:content' {
   collection: "legal";
   data: any
 } & { render(): Render[".md"] };
+"refund.md": {
+	id: "refund.md";
+  slug: "refund";
+  body: string;
+  collection: "legal";
+  data: any
+} & { render(): Render[".md"] };
 "terms.md": {
 	id: "terms.md";
   slug: "terms";
