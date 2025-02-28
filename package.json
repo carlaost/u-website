@@ -17,8 +17,6 @@
     "@astrojs/rss": "^0.2.2",
     "@astrojs/sitemap": "^0.1.2",
     "@astrojs/tailwind": "^5.0.3",
-    "@commitlint/cli": "^17.8.1",
-    "@commitlint/config-conventional": "^17.8.1",
     "@jridgewell/sourcemap-codec": "^1.4.15",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/typography": "^0.5.10",
