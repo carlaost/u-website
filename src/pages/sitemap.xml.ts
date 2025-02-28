@@ -15,7 +15,7 @@ const pages = [
   { url: '/whitepaper.pdf', changefreq: 'monthly', priority: 0.8 },
   // Pages with external canonical URLs
   {
-    url: 'https://app.undermind.ai/pricing',
+    url: '/pricing',
     changefreq: 'weekly',
     priority: 0.8,
   },

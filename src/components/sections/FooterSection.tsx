@@ -2,7 +2,7 @@ import Logo from '@/assets/logo.svg';
 
 export const FooterSection = () => {
   return (
-    <div className="h-fit min-h-0 w-full">
+    <footer className="mt-auto w-full bg-slate-2">
       <div className="mx-auto w-full max-w-screen-xl px-8">
         <div className="flex w-full flex-col items-start justify-between py-10 md:flex-row md:items-end">
           <div className="flex flex-col gap-2">
@@ -46,6 +46,6 @@ export const FooterSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };

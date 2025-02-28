@@ -69,5 +69,9 @@ a:hover {
     font-size: 32px;
   }
 
+  h1.title-font {
+    font-size: 40px;
+  }
+
 }
 

@@ -11,7 +11,7 @@ export const HeroSection = () => {
   return (
     <div
       id="hero"
-      className="flex min-h-0 w-full items-center justify-center md:min-h-[1024px] md:pb-12 md:pt-80"
+      className="flex min-h-0 w-full items-end justify-center md:h-screen md:max-h-[1024px]"
       style={{
         backgroundImage: `url(${gradient_light.src})`,
         backgroundSize: 'cover',
