@@ -2,10 +2,7 @@ const { slate } = require('@radix-ui/colors');
 
 /* eslint-disable import/no-extraneous-dependencies, global-require */
 module.exports = {
-  content: [
-    './src/**/*.{astro,html,js,jsx,svelte,ts,tsx,vue}',
-    './node_modules/astro-boilerplate-components/**/*.{js,ts,jsx,tsx}',
-  ],
+  content: ['./src/**/*.{astro,html,js,jsx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
       colors: {
@@ -55,12 +52,12 @@ module.exports = {
   plugins: [
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/typography'),
-    function({ addBase }) {
+    function ({ addBase }) {
       addBase({
-        'html': { 
-          'scroll-behavior': 'smooth' 
+        html: {
+          'scroll-behavior': 'smooth',
         },
-      })
-    }
+      });
+    },
   ],
 };

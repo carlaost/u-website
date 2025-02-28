@@ -16,18 +16,7 @@ import {
 } from '@/constants/pricing';
 import { cn } from '@/lib/utils';
 
-interface ProfileStatus {
-  status:
-    | 'pro_trial'
-    | 'free'
-    | 'pro'
-    | 'enterprise'
-    | 'custom_pro_access'
-    | 'custom_enterprise_access';
-}
-
 interface PricingSectionProps {
-  profileData?: ProfileStatus;
   hasProLikeAccess?: boolean;
   hasTeamsAccess?: boolean;
   defaultTab?: string;
@@ -36,7 +25,6 @@ interface PricingSectionProps {
 }
 
 export function PricingSection({
-  profileData,
   hasProLikeAccess = false,
   hasTeamsAccess = false,
   defaultTab = 'industry',
@@ -100,43 +88,32 @@ export function PricingSection({
           value="industry"
           className="flex flex-col items-center justify-center gap-1 md:flex-row md:flex-wrap md:gap-4 lg:flex-row lg:flex-nowrap"
         >
-          {/* FREE */}
-          <PricingCard
-            subscriptionOption={freeTier}
-            profileData={profileData}
-            features={features.free}
-          />
+          <PricingCard subscriptionOption={freeTier} features={features.free} />
 
-          {/* PRO / Industry */}
           <PricingCard
             subscriptionOption={
               isAnnual
                 ? PricingOptions.subscriptionOptions.annual.industry
                 : PricingOptions.subscriptionOptions.monthly.industry
             }
-            profileData={profileData}
             features={features.pro}
             alreadyHasPlan={hasProLikeAccess}
             alreadyHasPlanText="Your Current Plan"
           />
 
-          {/* TEAMS / Industry */}
           <PricingCard
             subscriptionOption={
               isAnnual
                 ? PricingOptions.subscriptionOptions.teams_annual.industry
                 : PricingOptions.subscriptionOptions.teams_monthly.industry
             }
-            profileData={profileData}
             features={features.team}
             alreadyHasPlan={hasTeamsAccess}
             alreadyHasPlanText="A Teams Plan is Active"
           />
 
-          {/* ENTERPRISE */}
           <PricingCard
             subscriptionOption={enterpriseTier}
-            profileData={profileData}
             features={features.enterprise}
           />
         </TabsContent>
@@ -146,43 +123,32 @@ export function PricingSection({
           value="academic"
           className="flex flex-col items-center justify-center gap-1 md:flex-row md:gap-4"
         >
-          {/* FREE */}
-          <PricingCard
-            subscriptionOption={freeTier}
-            profileData={profileData}
-            features={features.free}
-          />
+          <PricingCard subscriptionOption={freeTier} features={features.free} />
 
-          {/* PRO / Academic */}
           <PricingCard
             subscriptionOption={
               isAnnual
                 ? PricingOptions.subscriptionOptions.annual.academic
                 : PricingOptions.subscriptionOptions.monthly.academic
             }
-            profileData={profileData}
             features={features.pro}
             alreadyHasPlan={hasProLikeAccess}
             alreadyHasPlanText="Your Current Plan"
           />
 
-          {/* TEAMS / Academic */}
           <PricingCard
             subscriptionOption={
               isAnnual
                 ? PricingOptions.subscriptionOptions.teams_annual.academic
                 : PricingOptions.subscriptionOptions.teams_monthly.academic
             }
-            profileData={profileData}
             features={features.team}
             alreadyHasPlan={hasTeamsAccess}
             alreadyHasPlanText="A Teams plan is active"
           />
 
-          {/* ENTERPRISE */}
           <PricingCard
             subscriptionOption={enterpriseTier}
-            profileData={profileData}
             features={features.enterprise}
           />
         </TabsContent>

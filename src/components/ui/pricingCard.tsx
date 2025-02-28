@@ -12,7 +12,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import type { Profile } from '@/types/profile';
 
 interface SeatOption {
   numSeats: number;
@@ -41,34 +40,16 @@ const PRODUCT_MAPPING: Record<string, string> = {
 
 export default function PricingCard({
   subscriptionOption,
-  profileData,
   features,
   alreadyHasPlan = false,
   alreadyHasPlanText = '',
 }: {
   subscriptionOption: SubscriptionOption;
-  profileData?: Profile;
   features: string[];
   alreadyHasPlan?: boolean;
   alreadyHasPlanText?: string;
 }) {
   const product = PRODUCT_MAPPING[subscriptionOption.productName] || 'Free';
-
-  // Original logic for "currentPlan" from profile status
-  const currentPlan = profileData?.status
-    ? {
-        pro_trial: 'Free',
-        free: 'Free',
-        pro: 'Pro',
-        enterprise: 'Pro',
-        custom_pro_access: 'Pro',
-        custom_enterprise_access: 'Pro',
-      }[profileData.status]
-    : undefined;
-
-  // We keep the existing detection for "isCurrentPlan"
-  const isCurrentPlan = currentPlan === product;
-
   const [selectedSeats, setSelectedSeats] = useState<number>(
     product === 'Team' ? 5 : 1
   );
@@ -86,55 +67,26 @@ export default function PricingCard({
     setPrice(currentSeatOption ? Number(currentSeatOption.price) : 0);
   }, [subscriptionOption, selectedSeats]);
 
-  // Decide if the button should be disabled either because it is the same plan
-  // or because user already has the plan from a different source (enterprise, custom, etc.)
-  const disablePurchase = alreadyHasPlan || isCurrentPlan;
-
-  // The actual label on the button
+  // Simplified button label logic
   let buttonLabel;
-  if (!profileData) {
-    // Anonymous user labels
-    if (product === 'Enterprise') {
-      buttonLabel = 'Contact Us';
-    } else if (product === 'Team') {
-      buttonLabel = 'Sign Up to Purchase';
-    } else {
-      buttonLabel = 'Try for Free';
-    }
+  if (product === 'Enterprise') {
+    buttonLabel = 'Contact Us';
+  } else if (product === 'Team') {
+    buttonLabel = 'Sign Up to Purchase';
+  } else if (alreadyHasPlan) {
+    buttonLabel = alreadyHasPlanText || 'Your Current Plan';
   } else {
-    // Logged in user labels
-    buttonLabel = 'Upgrade';
-    if (disablePurchase) {
-      buttonLabel = alreadyHasPlanText || 'Your Current Plan';
-    } else if (product === 'Enterprise') {
-      buttonLabel = 'Contact Us';
-    } else if (product === 'Free') {
-      buttonLabel = 'Downgrade';
-    }
+    buttonLabel = 'Try for Free';
   }
 
   const handleButtonClick = () => {
-    if (!profileData) {
-      // For anonymous users
-      if (product === 'Enterprise') {
-        window.location.href = 'mailto:support@undermind.ai';
-      } else {
-        // Redirect to sign up page or show sign up modal
-        window.location.href = '/auth/register';
-      }
-      return;
-    }
-
-    // For logged in users
     if (product === 'Enterprise') {
       window.location.href = 'mailto:support@undermind.ai';
       return;
     }
 
-    // Here you would implement your own checkout logic
-    if (subscriptionOption.priceId && !disablePurchase) {
-      window.location.href = `/checkout?priceId=${subscriptionOption.priceId}&seats=${selectedSeats}`;
-    }
+    // Redirect to sign up for all other cases
+    window.open('https://app.undermind.ai/?auth=register', '_blank');
   };
 
   return (
@@ -235,15 +187,12 @@ export default function PricingCard({
             <Button
               className="w-full px-4 md:px-4"
               variant={product === 'Pro' ? 'default' : 'outline'}
-              disabled={disablePurchase}
               onClick={handleButtonClick}
             >
               {buttonLabel}
             </Button>
             <p className="text-text-muted text-sm font-normal">
-              {disablePurchase
-                ? ''
-                : subscriptionOption.signUpButtonEncouragementText}
+              {subscriptionOption.signUpButtonEncouragementText}
             </p>
           </div>
         </div>
