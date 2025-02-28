@@ -14,7 +14,7 @@ export const Header = () => {
           </a>
           <a
             className="hidden text-sm text-slate-11 hover:text-slate-10 md:block"
-            href="https://app.undermind.ai/?auth=ogin"
+            href="https://app.undermind.ai/?auth=login"
             target="_blank"
           >
             Login
