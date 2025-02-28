@@ -191,7 +191,7 @@ export default function PricingCard({
                 <SelectTrigger className="mt-2">
                   <SelectValue placeholder="Select team size" />
                 </SelectTrigger>
-                <SelectContent className="bg-focus">
+                <SelectContent>
                   <SelectGroup>
                     <SelectLabel>Team Size</SelectLabel>
                     {subscriptionOption.seatOptions?.map(
