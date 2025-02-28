@@ -53,7 +53,7 @@ export function PricingSection({
 
   return (
     <div className={cn('w-full pt-20 max-w-7xl mx-auto', className)}>
-      <h1 className="py-10 text-center">Pricing</h1>
+      <h1 className="py-4 text-center">Pricing</h1>
       <Tabs
         className="w-full items-center justify-center px-4"
         value={currentTab}
@@ -61,22 +61,10 @@ export function PricingSection({
       >
         <div className="flex w-full flex-col items-center justify-center gap-2">
           <TabsList className="w-full max-w-xs">
-            <TabsTrigger
-              value="industry"
-              className={cn(
-                'w-full',
-                'data-[state=active]:bg-accent-focus data-[state=active]:text-slate-1'
-              )}
-            >
+            <TabsTrigger value="industry" className={cn('w-full')}>
               Industry
             </TabsTrigger>
-            <TabsTrigger
-              value="academic"
-              className={cn(
-                'w-full',
-                'data-[state=active]:bg-accent-focus data-[state=active]:text-slate-1'
-              )}
-            >
+            <TabsTrigger value="academic" className={cn('w-full')}>
               Academic
             </TabsTrigger>
           </TabsList>
@@ -84,7 +72,7 @@ export function PricingSection({
             <span
               className={
                 !isAnnual
-                  ? 'text-accent-focus font-bold'
+                  ? 'font-bold text-accent'
                   : 'text-text-muted line-through opacity-60'
               }
             >
@@ -97,13 +85,13 @@ export function PricingSection({
             <span
               className={
                 isAnnual
-                  ? 'text-accent-focus font-bold'
+                  ? 'font-bold text-accent'
                   : 'text-text-muted line-through opacity-60'
               }
             >
               Annual
             </span>
-            <span className="text-accent-focus font-bold">billing period</span>
+            <span className="font-bold text-accent">billing period</span>
           </div>
         </div>
 

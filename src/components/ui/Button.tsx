@@ -4,18 +4,21 @@ import * as React from 'react';
 
 import { cn } from '@/utils/cn';
 
-const buttonVariants = cva('h-10 rounded-2xl px-4 py-2 md:px-16', {
-  variants: {
-    variant: {
-      default: 'bg-accent font-medium text-slate-1 hover:bg-accent-hover',
-      outline:
-        'border border-slate-6 bg-transparent font-medium text-slate-11 hover:text-slate-12',
+const buttonVariants = cva(
+  'h-10 items-center justify-center rounded-2xl px-4 text-sm md:px-16',
+  {
+    variants: {
+      variant: {
+        default: 'bg-accent font-medium text-slate-1 hover:bg-accent-hover',
+        outline:
+          'border border-slate-6 bg-transparent font-medium text-slate-11 hover:text-slate-12',
+      },
     },
-  },
-  defaultVariants: {
-    variant: 'default',
-  },
-});
+    defaultVariants: {
+      variant: 'default',
+    },
+  }
+);
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,

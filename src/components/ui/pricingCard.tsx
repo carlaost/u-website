@@ -148,23 +148,23 @@ export default function PricingCard({
           className="absolute left-4 top-0 mb-8"
           style={{ transform: 'translateY(-50%)' }}
         >
-          <span className="label font-label">POPULAR</span>
+          <span className="rounded-md bg-accent px-2 py-1 text-xs font-medium tracking-widest text-slate-1">
+            POPULAR
+          </span>
         </div>
       )}
       <CardContent
-        className={`py- space-y-0${
+        className={`space-y-0 py-4${
           product === 'Pro' ? '6' : '2'
         } flex w-full grow flex-col`}
       >
-        <p className="font-title-sm text-text-focus w-full pb-1 text-center tracking-tight">
-          {product}
-        </p>
+        <h3 className="text-center">{product}</h3>
 
         <div className="flex h-full flex-col justify-between">
           <div>
             {product !== 'Enterprise' && product !== 'Free' && (
-              <p className="">
-                <span className="font-title">
+              <p className="text-slate-10">
+                <span className="text-3xl font-black tracking-tight text-slate-12">
                   {product === 'Team'
                     ? `$${price}`
                     : `$${subscriptionOption.monthlyPrice}`}
@@ -188,7 +188,7 @@ export default function PricingCard({
                   setPrice(newPriceOption ? Number(newPriceOption.price) : 0);
                 }}
               >
-                <SelectTrigger className="bg-muted mt-2 w-full">
+                <SelectTrigger className="mt-2">
                   <SelectValue placeholder="Select team size" />
                 </SelectTrigger>
                 <SelectContent className="bg-focus">
@@ -233,7 +233,7 @@ export default function PricingCard({
 
           <div className="flex flex-col items-center gap-1">
             <Button
-              className="w-full"
+              className="w-full px-4 md:px-4"
               variant={product === 'Pro' ? 'default' : 'outline'}
               disabled={disablePurchase}
               onClick={handleButtonClick}
