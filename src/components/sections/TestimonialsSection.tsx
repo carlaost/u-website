@@ -4,9 +4,9 @@ import will from '@/assets/will.jpeg';
 
 export const TestimonialsSection = () => {
   return (
-    <div className="flex min-h-0 w-full items-end justify-center bg-slate-3 md:min-h-screen">
-      <div className="mx-auto w-full max-w-screen-xl px-8 py-16 md:pb-32">
-        <section className="flex flex-col items-center justify-center gap-10 pb-24">
+    <div className="flex min-h-0 w-full items-center justify-center bg-slate-3 md:min-h-[1024px]">
+      <div className="mx-auto w-full max-w-screen-xl px-8 py-16 md:py-32">
+        <section className="flex flex-col items-center justify-center gap-10 pb-12">
           <section className="flex flex-col items-center">
             <h6>Testimonials</h6>
             <h1>What Researchers Say</h1>

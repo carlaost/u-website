@@ -188,7 +188,7 @@ export function PricingSection({
         </TabsContent>
       </Tabs>
 
-      <p className="text-text-muted w-full text-center text-sm">
+      {/* <p className="text-text-muted w-full text-center text-sm">
         <a
           href="mailto:support@undermind.ai"
           className="text-accent-focus font-semibold"
@@ -196,7 +196,7 @@ export function PricingSection({
           Contact us
         </a>{' '}
         for custom pricing and plans for universities and large organizations.
-      </p>
+      </p> */}
     </div>
   );
 }

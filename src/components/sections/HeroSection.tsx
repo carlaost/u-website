@@ -11,7 +11,7 @@ export const HeroSection = () => {
   return (
     <div
       id="hero"
-      className="flex min-h-0 w-full items-end justify-center md:min-h-screen"
+      className="flex min-h-0 w-full items-center justify-center md:min-h-[1024px] md:pb-12 md:pt-80"
       style={{
         backgroundImage: `url(${gradient_light.src})`,
         backgroundSize: 'cover',
@@ -19,7 +19,7 @@ export const HeroSection = () => {
       }}
     >
       <div className="mx-auto w-full max-w-screen-xl px-8 py-32 md:py-16">
-        <div className="flex flex-col gap-24">
+        <div className="flex flex-col gap-16 md:gap-24">
           <div className="flex flex-col gap-4 md:flex-row">
             <div className="flex w-full flex-col gap-4">
               <h1 className="title-font">

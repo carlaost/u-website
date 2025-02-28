@@ -7,14 +7,14 @@ import { Button } from '@/components/ui/Button';
 export const BiosSection = () => {
   return (
     <div className="w-full">
-      <div className="mx-auto flex w-full max-w-screen-xl flex-col gap-10 px-8 py-16">
+      <div className="mx-auto flex w-full max-w-screen-xl flex-col gap-10 px-8 py-16 md:py-32">
         <section className="flex w-full flex-col items-center gap-10 md:flex-row">
           <div className="flex w-full flex-row justify-center gap-10">
             <div className="flex flex-col items-center gap-2.5">
               <img
                 src={josh.src}
                 alt="Joshua Ramette"
-                className="size-[100px] rounded-full"
+                className="size-[100px] rounded-full object-cover"
               />
               <h3>Joshua Ramette</h3>
               <p className="sm">CEO</p>
@@ -40,7 +40,7 @@ export const BiosSection = () => {
               <img
                 src={tom.src}
                 alt="Tom Hartke"
-                className="size-[100px] rounded-full"
+                className="size-[100px] rounded-full object-cover"
               />
               <h3>Tom Hartke</h3>
               <p className="sm">CTO</p>

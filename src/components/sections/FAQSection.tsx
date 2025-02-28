@@ -8,7 +8,7 @@ import {
 export const FAQSection = () => {
   return (
     <div className="w-full">
-      <div className="mx-auto w-full max-w-screen-xl px-8 py-16">
+      <div className="mx-auto w-full max-w-screen-xl px-8 py-16 md:py-32">
         <section className="flex w-full flex-col items-center gap-10">
           <div className="flex flex-col items-center gap-2.5">
             <h6>FAQ</h6>

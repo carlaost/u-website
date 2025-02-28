@@ -7,9 +7,9 @@ export const FeaturesSection = () => {
   return (
     <div
       id="features"
-      className="flex min-h-0 w-full items-center justify-center md:min-h-screen"
+      className="flex min-h-0 w-full items-center justify-center md:min-h-[1024px]"
     >
-      <div className="mx-auto w-full max-w-screen-xl px-8 py-16">
+      <div className="mx-auto w-full max-w-screen-xl px-8 py-16 md:py-32">
         <section className="flex h-full flex-col justify-center gap-24">
           <div className="flex flex-col gap-10 md:flex-row md:items-end">
             <div className="flex flex-col pb-0.5">
