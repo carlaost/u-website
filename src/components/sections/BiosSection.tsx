@@ -19,14 +19,17 @@ export const BiosSection = () => {
               <h3>Joshua Ramette</h3>
               <p className="sm">CEO</p>
               <div className="flex flex-row gap-4">
-                <a href="https://twitter.com/RametteJoshua">
+                <a href="https://twitter.com/RametteJoshua" target="_blank">
                   <img
                     src={twitter.src}
                     alt="Twitter"
                     className="size-4 grayscale"
                   />
                 </a>
-                <a href="https://www.linkedin.com/in/joshua-ramette-50984791/">
+                <a
+                  href="https://www.linkedin.com/in/joshua-ramette-50984791/"
+                  target="_blank"
+                >
                   <img
                     src={linkedin.src}
                     alt="LinkedIn"
@@ -45,14 +48,17 @@ export const BiosSection = () => {
               <h3>Tom Hartke</h3>
               <p className="sm">CTO</p>
               <div className="flex flex-row gap-4">
-                <a href="https://twitter.com/tom_hartke">
+                <a href="https://twitter.com/tom_hartke" target="_blank">
                   <img
                     src={twitter.src}
                     alt="Twitter"
                     className="size-4 grayscale"
                   />
                 </a>
-                <a href="https://www.linkedin.com/in/thomas-hartke-229a0679/">
+                <a
+                  href="https://www.linkedin.com/in/thomas-hartke-229a0679/"
+                  target="_blank"
+                >
                   <img
                     src={linkedin.src}
                     alt="LinkedIn"
@@ -85,14 +91,9 @@ export const BiosSection = () => {
         </section>
 
         <div className="mt-24 flex justify-center">
-          <Button
-            className="w-fit"
-            onClick={() => {
-              window.location.href = 'https://app.undermind.ai';
-            }}
-          >
-            Search now
-          </Button>
+          <a href="https://app.undermind.ai" target="_blank">
+            <Button className="w-fit">Search now</Button>
+          </a>
         </div>
       </div>
     </div>

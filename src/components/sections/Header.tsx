@@ -1,4 +1,4 @@
-import Logo from '@/assets/logo.png';
+import Logo from '@/assets/logo.svg';
 import { Button } from '@/components/ui/Button';
 
 export const Header = () => {

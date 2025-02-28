@@ -1,4 +1,4 @@
-import Logo from '@/assets/logo.png';
+import Logo from '@/assets/logo.svg';
 
 export const FooterSection = () => {
   return (
@@ -26,12 +26,14 @@ export const FooterSection = () => {
             <a
               href="https://twitter.com/UndermindAI"
               className="text-slate-11 hover:text-slate-10"
+              target="_blank"
             >
               Twitter
             </a>
             <a
               href="https://www.linkedin.com/company/undermind-ai"
               className="text-slate-11 hover:text-slate-10"
+              target="_blank"
             >
               LinkedIn
             </a>
