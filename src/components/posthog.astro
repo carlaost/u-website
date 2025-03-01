@@ -19,56 +19,18 @@
           console.log('PostHog loaded successfully!');
           
           // Send a test event
-          posthog.capture('test_event', { 
-            test_property: 'test_value',
-            timestamp: new Date().toISOString()
-          });
-          console.log('Test event sent to PostHog');
+          // posthog.capture('test_event', { 
+          //   test_property: 'test_value',
+          //   timestamp: new Date().toISOString()
+          // });
+          // console.log('Test event sent to PostHog');
           
-          // Check if we're in development mode
-          const isDev = window.location.hostname === 'localhost' || 
-                        window.location.hostname === '127.0.0.1' ||
-                        window.location.hostname.includes('.local');
-          console.log('Is development environment:', isDev);
-          
-          // Log the current distinct_id being used
-          console.log('Current distinct_id:', posthog.get_distinct_id());
-          
-          // Check if cookies are enabled
-          console.log('Cookies enabled:', navigator.cookieEnabled);
         },
         bootstrap: {
           distinctID: 'test-user-' + new Date().getTime()
         }
       }
     );
-    
-    // Add a button to manually trigger an event (will be removed after 10 seconds)
-    setTimeout(() => {
-      const testButton = document.createElement('button');
-      testButton.innerText = 'Test PostHog Event';
-      testButton.style.position = 'fixed';
-      testButton.style.bottom = '10px';
-      testButton.style.right = '10px';
-      testButton.style.zIndex = '9999';
-      testButton.style.padding = '10px';
-      testButton.style.background = '#f0f0f0';
-      testButton.style.border = '1px solid #ccc';
-      testButton.style.borderRadius = '4px';
-      
-      testButton.addEventListener('click', () => {
-        console.log('Manual test event button clicked');
-        posthog.capture('manual_test_event', { timestamp: new Date().toISOString() });
-        alert('Manual test event sent to PostHog!');
-      });
-      
-      document.body.appendChild(testButton);
-      
-      // Remove the button after 30 seconds
-      setTimeout(() => {
-        document.body.removeChild(testButton);
-      }, 30000);
-    }, 2000);
 
   } catch (error) {
     console.error('PostHog initialization error:', error);
