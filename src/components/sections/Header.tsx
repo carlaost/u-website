@@ -9,17 +9,44 @@ export const Header = () => {
           <img src={Logo.src} alt="Logo" className="size-6" />
         </a>
         <div className="flex flex-row items-center gap-8 text-sm">
-          <a className="text-slate-11 hover:text-slate-10" href="/pricing">
+          <a
+            className="text-slate-11 hover:text-slate-10"
+            href="/pricing"
+            onClick={() => {
+              if (window.posthog) {
+                window.posthog.capture('pricing_link_clicked', {
+                  source: 'header',
+                });
+              }
+            }}
+          >
             Pricing
           </a>
           <a
             className="hidden text-sm text-slate-11 hover:text-slate-10 md:block"
             href="https://app.undermind.ai/?auth=login"
             target="_blank"
+            onClick={() => {
+              if (window.posthog) {
+                window.posthog.capture('login_button_clicked', {
+                  source: 'header',
+                });
+              }
+            }}
           >
             Login
           </a>
-          <a href="https://app.undermind.ai/?auth=register" target="_blank">
+          <a
+            href="https://app.undermind.ai/?auth=register"
+            target="_blank"
+            onClick={() => {
+              if (window.posthog) {
+                window.posthog.capture('signup_button_clicked', {
+                  source: 'header',
+                });
+              }
+            }}
+          >
             <Button>Sign up</Button>
           </a>
         </div>
