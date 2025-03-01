@@ -31,7 +31,17 @@ export const HeroSection = () => {
               </p>
             </div>
             <div className="flex w-full flex-col-reverse gap-4 pt-8 md:w-[30%] md:flex-col">
-              <a href="/#features" className="w-full">
+              <a
+                href="/#features"
+                className="w-full"
+                onClick={() => {
+                  if (window.posthog) {
+                    window.posthog.capture('learn_more_button_clicked', {
+                      source: 'hero_section',
+                    });
+                  }
+                }}
+              >
                 <Button
                   variant="outline"
                   className="w-full bg-slate-1 hover:bg-slate-2"
@@ -43,6 +53,16 @@ export const HeroSection = () => {
                 href="https://app.undermind.ai"
                 target="_blank"
                 className="w-full"
+                onClick={() => {
+                  if (window.posthog) {
+                    window.posthog.capture(
+                      'try_searching_free_button_clicked',
+                      {
+                        source: 'hero_section',
+                      }
+                    );
+                  }
+                }}
               >
                 <Button className="w-full">Try Searching Free</Button>
               </a>
