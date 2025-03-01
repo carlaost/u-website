@@ -9,26 +9,17 @@ export const Header = () => {
           <img src={Logo.src} alt="Logo" className="size-6" />
         </a>
         <div className="flex flex-row items-center gap-8 text-sm">
-          <a
-            className="text-slate-11 hover:text-slate-10"
-            href="/pricing"
-            posthog-capture="pricing_link_clicked"
-          >
+          <a className="text-slate-11 hover:text-slate-10" href="/pricing">
             Pricing
           </a>
           <a
             className="hidden text-sm text-slate-11 hover:text-slate-10 md:block"
             href="https://app.undermind.ai/?auth=login"
             target="_blank"
-            posthog-capture="login_button_clicked"
           >
             Login
           </a>
-          <a
-            href="https://app.undermind.ai/?auth=register"
-            target="_blank"
-            posthog-capture="signup_button_clicked"
-          >
+          <a href="https://app.undermind.ai/?auth=register" target="_blank">
             <Button>Sign up</Button>
           </a>
         </div>
