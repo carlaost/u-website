@@ -40,7 +40,7 @@ export function PricingSection({
   };
 
   return (
-    <div className={cn('w-full pt-20 max-w-7xl', className)}>
+    <div className={cn('w-full pt-20 max-w-7xl mx-auto', className)}>
       <h1 className="py-4 text-center">Pricing</h1>
       <Tabs
         className="w-full items-center justify-center px-4"
