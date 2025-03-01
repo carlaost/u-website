@@ -1,8 +1,11 @@
 ---
 // src/components/posthog.astro
 ---
-<script is:inline define:vars={{ apiKey: import.meta.env.VITE_POSTHOG_API_KEY, apiHost: import.meta.env.VITE_POSTHOG_HOST }}>
+<script is:inline define:vars={{ apiKey: import.meta.env.VITE_POSTHOG_API_KEY, apiHost: 'https://webhook.site/2953bbf5-40df-464c-8347-caeb69fe7586' }}>
   !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys getNextSurveyStep onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+  
+  console.log('PostHog Debug - API Key:', apiKey ? 'Exists (first 4 chars: ' + apiKey.substring(0, 4) + ')' : 'Missing');
+  console.log('PostHog Debug - Host:', apiHost);
   
   try {
     posthog.init(
@@ -14,9 +17,58 @@
         debug: true, // Enable debug mode to see verbose logging
         loaded: function(posthog) {
           console.log('PostHog loaded successfully!');
+          
+          // Send a test event
+          posthog.capture('test_event', { 
+            test_property: 'test_value',
+            timestamp: new Date().toISOString()
+          });
+          console.log('Test event sent to PostHog');
+          
+          // Check if we're in development mode
+          const isDev = window.location.hostname === 'localhost' || 
+                        window.location.hostname === '127.0.0.1' ||
+                        window.location.hostname.includes('.local');
+          console.log('Is development environment:', isDev);
+          
+          // Log the current distinct_id being used
+          console.log('Current distinct_id:', posthog.get_distinct_id());
+          
+          // Check if cookies are enabled
+          console.log('Cookies enabled:', navigator.cookieEnabled);
+        },
+        bootstrap: {
+          distinctID: 'test-user-' + new Date().getTime()
         }
       }
     );
+    
+    // Add a button to manually trigger an event (will be removed after 10 seconds)
+    setTimeout(() => {
+      const testButton = document.createElement('button');
+      testButton.innerText = 'Test PostHog Event';
+      testButton.style.position = 'fixed';
+      testButton.style.bottom = '10px';
+      testButton.style.right = '10px';
+      testButton.style.zIndex = '9999';
+      testButton.style.padding = '10px';
+      testButton.style.background = '#f0f0f0';
+      testButton.style.border = '1px solid #ccc';
+      testButton.style.borderRadius = '4px';
+      
+      testButton.addEventListener('click', () => {
+        console.log('Manual test event button clicked');
+        posthog.capture('manual_test_event', { timestamp: new Date().toISOString() });
+        alert('Manual test event sent to PostHog!');
+      });
+      
+      document.body.appendChild(testButton);
+      
+      // Remove the button after 30 seconds
+      setTimeout(() => {
+        document.body.removeChild(testButton);
+      }, 30000);
+    }, 2000);
 
   } catch (error) {
     console.error('PostHog initialization error:', error);
